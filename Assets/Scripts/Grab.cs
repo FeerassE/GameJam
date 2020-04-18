@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class movement : MonoBehaviour
+public class Grab : MonoBehaviour
 {
     public bool grabbed;
     public float moveSpeed = 5f;
