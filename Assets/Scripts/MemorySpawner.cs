@@ -12,6 +12,7 @@ public class MemorySpawner : MonoBehaviour
     public GameObject empathy;
     public float respawnTime = 5.0f;
     public Stack<GameObject> numbers = new Stack<GameObject>();
+    private List<GameObject> activeMemories = new List<GameObject>();
 
     void Start()
     {
@@ -28,7 +29,13 @@ public class MemorySpawner : MonoBehaviour
 
     public void spawnMemory()
     {
-        GameObject a = (GameObject)Instantiate(numbers.Pop(), new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        GameObject tmp = numbers.Pop();
+        GameObject a = (GameObject)Instantiate(tmp, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        activeMemories.Add(a);
+        foreach (GameObject activeMemory in activeMemories)
+        {
+            activeMemory.transform.localPosition = new Vector3(activeMemory.transform.position.x + 1, activeMemory.transform.position.y);
+        }
     }
 
     IEnumerator memories()

@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 8863640944415935776, guid: 2c0afdf3864b1054bbb927fec47bef8e,
         type: 3}
       propertyPath: m_Name
-      value: Sad
+      value: Sad Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c0afdf3864b1054bbb927fec47bef8e, type: 3}

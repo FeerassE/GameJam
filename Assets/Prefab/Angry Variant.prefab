@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 7143800052219111813, guid: 3d718ba9fb8dbcd4a98b1f04a53c7ea0,
         type: 3}
       propertyPath: m_Name
-      value: Angry
+      value: Angry Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d718ba9fb8dbcd4a98b1f04a53c7ea0, type: 3}

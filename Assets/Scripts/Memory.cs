@@ -17,7 +17,7 @@ public class Memory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.right * speed * Time.deltaTime;
+        // transform.position += transform.right * speed * Time.deltaTime;
         if (this.transform.position.x > 50)
             Destroy(this.gameObject);
     }

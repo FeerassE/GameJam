@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 4809638630606181660, guid: 1fa842bc8dbabd2418bea7fb8b786486,
         type: 3}
       propertyPath: m_Name
-      value: empathetic
+      value: empathetic Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8518327061483373894, guid: 1fa842bc8dbabd2418bea7fb8b786486,
         type: 3}

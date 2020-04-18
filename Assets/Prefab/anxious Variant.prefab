@@ -80,7 +80,7 @@ PrefabInstance:
     - target: {fileID: 3632894690543630450, guid: 476770ad36a5f1f409462ae9fd76460c,
         type: 3}
       propertyPath: m_Name
-      value: anxious
+      value: anxious Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476770ad36a5f1f409462ae9fd76460c, type: 3}
