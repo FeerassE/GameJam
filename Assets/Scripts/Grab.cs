@@ -61,7 +61,10 @@ public class Grab : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) {
         inPlayer = true;
-        heldObject = collision.gameObject;
+        if (!grabbed)
+        {
+            heldObject = collision.gameObject;
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision) {
