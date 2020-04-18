@@ -5,11 +5,14 @@ using UnityEngine;
 public class Grab : MonoBehaviour
 {
     public bool grabbed;
+    public bool inPlayer = false;
     RaycastHit2D hit;
     public float distance = 2f;
     public Vector2 direction;
     public Vector2 playerDirection;
     public Transform holdPoint;
+    public GameObject heldObject;
+
     void Update()
     {
         // Sets the direction of the player
@@ -20,27 +23,49 @@ public class Grab : MonoBehaviour
 
         // Grab object on square button on ps4 controller or E
         if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0)) {
-            if(!grabbed) {
-                Physics2D.queriesStartInColliders = false; // 
+            if(!grabbed) { // pick up
+                Physics2D.queriesStartInColliders = false; 
                 hit = Physics2D.Raycast(transform.position, playerDirection, distance);
-
                 if(hit.collider != null)
+                {
+                    heldObject = hit.collider.gameObject;
+                    grabbed = true;
+                }
+                else if (inPlayer == true) 
                 {
                     grabbed = true;
                 }
-            } else {
+                else 
+                {
+                    grabbed = false;
+                }
+
+                if(grabbed) {
+                    if(heldObject.tag != "emotion") {
+                        grabbed = false;
+                    }
+                }
+
+            } else { // drops
                 grabbed = false;
             }
         }
 
         // Calculates the position of the hold point where the object will intersect
         holdPoint.position = transform.position + new Vector3(playerDirection.x, playerDirection.y, 0) * 2; 
-
-        // If grabbed, set the object equal
+        
         if(grabbed) {
-            hit.collider.gameObject.transform.position = holdPoint.position;
+            heldObject.transform.position = holdPoint.position;
         }
+    }
 
+    void OnTriggerEnter2D(Collider2D collision) {
+        inPlayer = true;
+        heldObject = collision.gameObject;
+    }
+
+    void OnTriggerExit2D(Collider2D collision) {
+        inPlayer = false;
     }
 
     // Tells you which direction raycast is facing and its length for debug purposes
@@ -48,10 +73,5 @@ public class Grab : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawLine(transform.position, transform.position + new Vector3(playerDirection.x, playerDirection.y, 0)  * distance);   
-    }
-
-    void FixedUpdate()
-    {
-
     }
 }
