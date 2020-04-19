@@ -22,7 +22,7 @@ public class Collector : MonoBehaviour
     {   
         if(coll.gameObject.tag == "emotion") {
             if(coll.gameObject.GetComponent<Memory>().type == memorySpawner.GetComponent<MemorySpawner>().activeMemories.Peek().GetComponent<Memory>().type) {
-                memorySpawner.GetComponent<MemorySpawner>().activeMemories.Dequeue();
+                Destroy(memorySpawner.GetComponent<MemorySpawner>().activeMemories.Dequeue());
                 points++;
                 gameObject.transform.localScale += new Vector3(width + 1, height + 1, 0);
                 Destroy(coll.gameObject);
