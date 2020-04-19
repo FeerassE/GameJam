@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Collector : MonoBehaviour
 {
-
-
     public int points = 0;
     public GameObject memorySpawner;
     public GameObject emotionToTest;
@@ -32,7 +30,6 @@ public class Collector : MonoBehaviour
         if(coll.gameObject.tag == "emotion") {
             if(memorySpawner.GetComponent<MemorySpawner>().activeMemories.Count > 0) {
                 if(coll.gameObject.GetComponent<Memory>().type == memorySpawner.GetComponent<MemorySpawner>().activeMemories.Peek().GetComponent<Memory>().type) {
-                    Debug.Log("Deleting");
                     Destroy(memorySpawner.GetComponent<MemorySpawner>().activeMemories.Dequeue());
                     points++;
                     gameObject.transform.localScale += new Vector3(width + 1, height + 1, 0);
