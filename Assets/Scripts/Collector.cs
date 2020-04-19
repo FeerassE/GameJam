@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Collector : MonoBehaviour
 {
@@ -13,14 +14,17 @@ public class Collector : MonoBehaviour
 
     public float shrinkSpeed = 2.0f;
     public float shrinkAmount = 0.4f;
-    public int maxShrinking = 50;
-
+    public bool endCondition = false;
+    
+    /* which xvalue of the collector's scale will trigger a game over */
+    public int gameOverValue = 1;
     public int timesShrunk = 0;
     void Start() {
         memorySpawner = GameObject.Find("RecipeSpawner");
         size = gameObject.GetComponent<SpriteRenderer>().size; 
         width = size.x;
-        height = size.y;   
+        height = size.y;
+
 
         /* shrinks at shrinkspeed starting in 5 seconds*/
         InvokeRepeating("ShrinkCollector", 5.0f,  shrinkSpeed);
@@ -44,13 +48,15 @@ public class Collector : MonoBehaviour
 
     /* shrinks the collector */
     void ShrinkCollector() {
-        if(timesShrunk != maxShrinking) {
-            gameObject.transform.localScale += new Vector3(width - shrinkAmount, height - shrinkAmount, 0);
-            timesShrunk++;
-        }
+        gameObject.transform.localScale += new Vector3(width - shrinkAmount, height - shrinkAmount, 0);
+        timesShrunk++;
     }
     void Update()
     {
-        
+        /* GAME OVER CONDITION */
+        if(gameObject.transform.localScale.x < gameOverValue) {
+            SceneManager.LoadScene("GameOver");
+        }
+        Debug.Log(gameObject.transform.localScale);
     }
 }
