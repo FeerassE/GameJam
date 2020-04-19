@@ -27,6 +27,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: empathetic Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5322640512180043253, guid: 1fa842bc8dbabd2418bea7fb8b786486,
+        type: 3}
+      propertyPath: type
+      value: empathetic
+      objectReference: {fileID: 0}
     - target: {fileID: 8518327061483373894, guid: 1fa842bc8dbabd2418bea7fb8b786486,
         type: 3}
       propertyPath: m_LocalPosition.x

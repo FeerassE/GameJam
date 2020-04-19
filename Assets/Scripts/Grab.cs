@@ -6,15 +6,24 @@ public class Grab : MonoBehaviour
 {
     public bool grabbed;
     public bool inPlayer = false;
+    RaycastHit2D[] hits;
     RaycastHit2D hit;
+
     public float distance = 2f;
     public Vector2 direction;
     public Vector2 playerDirection;
     public Transform holdPoint;
     public GameObject heldObject;
 
+    void Start() {
+        heldObject = null;
+    }
     void Update()
     {
+        if(!heldObject) {
+            grabbed = false;
+        }
+
         // Sets the direction of the player
         direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if(!direction.Equals(Vector2.zero)) {
@@ -25,7 +34,12 @@ public class Grab : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0)) {
             if(!grabbed) { // pick up
                 Physics2D.queriesStartInColliders = false; 
-                hit = Physics2D.Raycast(transform.position, playerDirection, distance);
+                hits = Physics2D.RaycastAll(transform.position, playerDirection, distance);
+                for(int i = 0; i < hits.Length; i++) {
+                    if(hits[i].collider.gameObject.tag == "emotion") {
+                        hit = hits[i];
+                    }
+                }
                 if(hit.collider != null)
                 {
                     heldObject = hit.collider.gameObject;
@@ -59,7 +73,7 @@ public class Grab : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision) {
+    void OnCollisionEnter2D(Collision2D collision){
         inPlayer = true;
         if (!grabbed)
         {
@@ -67,7 +81,7 @@ public class Grab : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D collision) {
+    void OnCollisionExit2D(Collision2D collision) {
         inPlayer = false;
     }
 
