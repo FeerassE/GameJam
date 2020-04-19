@@ -82,5 +82,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: anxious Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4109596212638666907, guid: 476770ad36a5f1f409462ae9fd76460c,
+        type: 3}
+      propertyPath: type
+      value: anxious
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476770ad36a5f1f409462ae9fd76460c, type: 3}

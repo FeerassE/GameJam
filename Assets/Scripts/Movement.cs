@@ -9,8 +9,6 @@ public class Movement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
 
-    // public Animator animator;
-
     Vector2 movement;
 
     void Update()
@@ -21,11 +19,6 @@ public class Movement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("speed", movement.sqrMagnitude);
-
-
-        // animator.SetFloat("Horizontal", movement.x);
-        // animator.SetFloat("Vertical", movement.y);
-        // animator.SetFloat("Speed", movement.sqrMagnitude);  
     }
 
     void FixedUpdate()
