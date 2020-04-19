@@ -35,12 +35,9 @@ public class MemorySpawner : MonoBehaviour
     {   
         int randomNum = r.Next(0,5);
         GameObject tmp = numbers[randomNum];
-        GameObject a = (GameObject)Instantiate(tmp, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        int activeLength = activeMemories.Count;
+        GameObject a = (GameObject)Instantiate(tmp, new Vector3(transform.position.x + activeLength, transform.position.y, transform.position.z), Quaternion.identity);
         activeMemories.Enqueue(a);
-        foreach (GameObject activeMemory in activeMemories)
-        {
-            activeMemory.transform.localPosition = new Vector3(activeMemory.transform.position.x + 1, activeMemory.transform.position.y);
-        }
     }
 
     private void fillNumbers() {

@@ -6,7 +6,6 @@ public class Collector : MonoBehaviour
 {
     public int points = 0;
     public GameObject memorySpawner;
-    public GameObject emotionToTest;
     public Vector2 size;
     public float width;
     public float height;
@@ -17,7 +16,7 @@ public class Collector : MonoBehaviour
 
     public int timesShrunk = 0;
     void Start() {
-        memorySpawner = GameObject.Find("RecipeSpawner");
+        memorySpawner = GameObject.Find("EmotionSpawner");
         size = gameObject.GetComponent<SpriteRenderer>().size; 
         width = size.x;
         height = size.y;   
