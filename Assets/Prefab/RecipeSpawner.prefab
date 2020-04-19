@@ -50,4 +50,6 @@ MonoBehaviour:
     type: 3}
   anxiety: {fileID: 4809638630606181660, guid: 1fa842bc8dbabd2418bea7fb8b786486, type: 3}
   empathy: {fileID: 3142447816533534413, guid: 296955a72dc7cdb48993d8cc768a4f41, type: 3}
-  respawnTime: 2
+  respawnTime: 1
+  recipeLength: 5
+  numbers: []
