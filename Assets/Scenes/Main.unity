@@ -121,6 +121,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &181525298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4610110413874329251, guid: 261e00fc4b6e04947977adf74fe7da68,
+    type: 3}
+  m_PrefabInstance: {fileID: 2243857024758222648}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &181525299
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181525298}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 36c4933941111404bb17031e04486e14, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &186090024
 GameObject:
   m_ObjectHideFlags: 0
@@ -983,15 +1008,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4610110413874329308, guid: 261e00fc4b6e04947977adf74fe7da68,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 181525299}
     - target: {fileID: 4610110413874329309, guid: 261e00fc4b6e04947977adf74fe7da68,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7773963361192750452, guid: a05844af26fc1f249afe9fc51ab240b7,
+        type: 3}
+    - target: {fileID: 4610110413874329310, guid: 261e00fc4b6e04947977adf74fe7da68,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4610110413874329310, guid: 261e00fc4b6e04947977adf74fe7da68,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 261e00fc4b6e04947977adf74fe7da68, type: 3}
