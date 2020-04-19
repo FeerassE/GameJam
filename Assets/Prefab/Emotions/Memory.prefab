@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9192188428228522913}
   - component: {fileID: 3121169445190521667}
   - component: {fileID: 1634874513950760377}
+  - component: {fileID: 8665681218213454061}
   m_Layer: 0
   m_Name: Memory
   m_TagString: emotion
@@ -134,3 +135,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
+--- !u!111 &8665681218213454061
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2148964926796920144}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: f1ddd2725bd2f604c9f08fe6576d409e, type: 2}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
