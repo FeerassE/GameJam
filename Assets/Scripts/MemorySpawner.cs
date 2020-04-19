@@ -11,7 +11,7 @@ public class MemorySpawner : MonoBehaviour
     public GameObject anxiety;
     public GameObject empathy;
 
-    public float respawnTime = 5.0f;
+    public float respawnTime;
     public int recipeLength = 5;
     public List<GameObject> numbers = new List<GameObject>();
     public Queue<GameObject> activeMemories = new Queue<GameObject>();
