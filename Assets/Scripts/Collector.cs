@@ -70,7 +70,7 @@ public class Collector : MonoBehaviour
         }
 
         /* Win condition */
-        if(gameObject.transform.localScale.x > 1.0f && doorCount < 1)
+        if(gameObject.transform.localScale.x > 38.0f && doorCount < 1)
         {
             doorCount++;
             GameObject a = (GameObject)Instantiate(door, new Vector3(-16.999f, -3.26f), Quaternion.identity);
