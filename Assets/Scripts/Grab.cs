@@ -66,7 +66,7 @@ public class Grab : MonoBehaviour
         }
 
         // Calculates the position of the hold point where the object will intersect
-        holdPoint.position = transform.position + new Vector3(playerDirection.x, playerDirection.y, 0) * 2; 
+        holdPoint.position = transform.position + new Vector3(playerDirection.x, playerDirection.y, 0) * 1; 
         
         if(grabbed) {
             heldObject.transform.position = holdPoint.position;
