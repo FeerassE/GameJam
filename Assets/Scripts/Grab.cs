@@ -49,18 +49,15 @@ public class Grab : MonoBehaviour
                 }
                 if(hitSuccess)
                 {
-                    Debug.Log("hit collider: grabbed is true");
                     heldObject = hit.collider.gameObject;
                     grabbed = true;
                 }
                 else if (inPlayer == true) 
                 {
-                    Debug.Log("inPlayer: grabbed is true");
                     grabbed = true;
                 }
                 else 
                 {
-                    Debug.Log("grabbed i false");
                     grabbed = false;
                     hitSuccess = false;
                 }
@@ -91,11 +88,9 @@ public class Grab : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision){
-        Debug.Log("Collision occured");
         inPlayer = true;
         if (!grabbed)
         {
-            Debug.Log("held object set from collision");
             heldObject = collision.gameObject;
         }
     }

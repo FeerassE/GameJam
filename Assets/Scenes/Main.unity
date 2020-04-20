@@ -29817,6 +29817,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5890444155973029741, guid: d58a04600bee58c42bcd4f4ed2953b3d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.9716981
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890444155973029741, guid: d58a04600bee58c42bcd4f4ed2953b3d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.048609633
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890444155973029741, guid: d58a04600bee58c42bcd4f4ed2953b3d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5890444155973029742, guid: d58a04600bee58c42bcd4f4ed2953b3d,
         type: 3}
       propertyPath: m_UseAutoMass
@@ -29909,7 +29924,7 @@ PrefabInstance:
     - target: {fileID: 8527040397662181683, guid: e0cf6791315693a41be70f46f8cb2ac4,
         type: 3}
       propertyPath: moveSpeed
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 8527040397662181708, guid: e0cf6791315693a41be70f46f8cb2ac4,
         type: 3}
