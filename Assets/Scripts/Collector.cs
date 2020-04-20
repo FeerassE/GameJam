@@ -34,6 +34,10 @@ public class Collector : MonoBehaviour
             if(memorySpawner.GetComponent<MemorySpawner>().activeMemories.Count > 0) {
                 if(coll.gameObject.GetComponent<Memory>().type == memorySpawner.GetComponent<MemorySpawner>().activeMemories.Peek().GetComponent<Memory>().type) {
                     Destroy(memorySpawner.GetComponent<MemorySpawner>().activeMemories.Dequeue());
+                    foreach(GameObject memory in memorySpawner.GetComponent<MemorySpawner>().activeMemories)
+                    {
+                        memory.transform.position = new Vector3(memory.transform.position.x -1, memory.transform.position.y, 0);
+                    }
                     points++;
                     gameObject.transform.localScale += new Vector3(width + 1, height + 1, 0);
                     Destroy(coll.gameObject);
