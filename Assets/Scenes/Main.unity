@@ -29686,6 +29686,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 1451377404853975237, guid: d58a04600bee58c42bcd4f4ed2953b3d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5890444155973029731, guid: d58a04600bee58c42bcd4f4ed2953b3d,
         type: 3}
       propertyPath: memorySpawner
@@ -29750,6 +29755,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UseAutoMass
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890444155973029742, guid: d58a04600bee58c42bcd4f4ed2953b3d,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890444155973029742, guid: d58a04600bee58c42bcd4f4ed2953b3d,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5890444155973029742, guid: d58a04600bee58c42bcd4f4ed2953b3d,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5890444155973029743, guid: d58a04600bee58c42bcd4f4ed2953b3d,
         type: 3}
