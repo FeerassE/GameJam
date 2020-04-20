@@ -22,8 +22,8 @@ public class Collector : MonoBehaviour
     public int gameOverValue = 1;
     public int timesShrunk = 0;
 
+    private int doorCount = 0;
 
-    
     void Start() {
         memorySpawner = GameObject.Find("EmotionSpawner");
         size = gameObject.GetComponent<SpriteRenderer>().size; 
@@ -32,7 +32,8 @@ public class Collector : MonoBehaviour
 
         /* shrinks at shrinkspeed starting in 5 seconds*/
         InvokeRepeating("ShrinkCollector", 15.0f,  shrinkSpeed);
-    } 
+    }
+
     void OnTriggerEnter2D(Collider2D coll)
     {   
         if(coll.gameObject.tag == "emotion") {
@@ -59,6 +60,7 @@ public class Collector : MonoBehaviour
         gameObject.transform.localScale += new Vector3(width - shrinkAmount, height - shrinkAmount, 0);
         timesShrunk++;
     }
+
     void Update()
     {
         scale = gameObject.transform.localScale.x;
@@ -67,8 +69,10 @@ public class Collector : MonoBehaviour
             SceneManager.LoadScene("GameOver");
         }
 
-        if(gameObject.transform.localScale.x > 1.0f)
+        /* Win condition */
+        if(gameObject.transform.localScale.x > 1.0f && doorCount < 1)
         {
+            doorCount++;
             GameObject a = (GameObject)Instantiate(door, new Vector3(-16.999f, -3.26f), Quaternion.identity);
         }
 

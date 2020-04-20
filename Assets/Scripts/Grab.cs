@@ -8,23 +8,18 @@ public class Grab : MonoBehaviour
     public bool inPlayer = false;
     RaycastHit2D[] hits;
     RaycastHit2D hit;
-
     public float distance = 2f;
     public Vector2 direction;
     public Vector2 playerDirection;
     public Transform holdPoint;
     public GameObject heldObject;
-
     private Vector3 lastPosition;
-    private bool moving = false;
-
     private bool hitSuccess = false;
 
     void Start() {
         heldObject = null;
 
         lastPosition = transform.position;
-        moving = false;
     }
     void Update()
     {

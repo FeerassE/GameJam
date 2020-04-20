@@ -12,8 +12,8 @@ public class MemorySpawner : MonoBehaviour
     public GameObject empathy;
 
     public float respawnTime;
-    public int recipeLength = 5;
-    public List<GameObject> numbers = new List<GameObject>();
+    public int recipeLength = 6;
+    public List<GameObject> memoryOrder = new List<GameObject>();
     public Queue<GameObject> activeMemories = new Queue<GameObject>();
 
     public System.Random r;
@@ -21,12 +21,12 @@ public class MemorySpawner : MonoBehaviour
     {
         r = new System.Random();
         
-        numbers.Add(happy);
-        numbers.Add(sad);
-        numbers.Add(angry);
-        numbers.Add(depression);
-        numbers.Add(anxiety);
-        numbers.Add(empathy);
+        memoryOrder.Add(happy);
+        memoryOrder.Add(sad);
+        memoryOrder.Add(angry);
+        memoryOrder.Add(depression);
+        memoryOrder.Add(anxiety);
+        memoryOrder.Add(empathy);
         spawnMemory();
         StartCoroutine(memories());
     }
@@ -34,14 +34,10 @@ public class MemorySpawner : MonoBehaviour
     public void spawnMemory()
     {   
         int randomNum = r.Next(0,5);
-        GameObject tmp = numbers[randomNum];
+        GameObject tmp = memoryOrder[randomNum];
         int activeLength = activeMemories.Count;
         GameObject a = (GameObject)Instantiate(tmp, new Vector3(transform.position.x + activeLength, transform.position.y, transform.position.z), Quaternion.identity);
         activeMemories.Enqueue(a);
-    }
-
-    private void fillNumbers() {
-
     }
 
     IEnumerator memories()
@@ -49,7 +45,7 @@ public class MemorySpawner : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(respawnTime);
-            if((activeMemories.Count != recipeLength) && (activeMemories.Count < 5)) {
+            if((activeMemories.Count != recipeLength) && (activeMemories.Count < 6)) {
                 spawnMemory();
             }
             
