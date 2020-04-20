@@ -1068,12 +1068,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 0
@@ -2582,7 +2582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 141.4, y: -169.86}
+  m_AnchoredPosition: {x: 232.8, y: -179.5}
   m_SizeDelta: {x: 300, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533924459
@@ -2680,8 +2680,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200.2001, y: 8.479998}
-  m_SizeDelta: {x: 300, y: 40}
+  m_AnchoredPosition: {x: -213.05, y: 17.15}
+  m_SizeDelta: {x: 287.14758, y: 32.154587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1809502580
 MonoBehaviour:
@@ -2866,7 +2866,7 @@ RectTransform:
   m_GameObject: {fileID: 1868516065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1533924458}
   m_RootOrder: 0
@@ -29662,6 +29662,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1840438466}
     m_Modifications:
+    - target: {fileID: 3848121223567756540, guid: 3a6debd15835ffc4f98c5ab3b3c922c5,
+        type: 3}
+      propertyPath: recipeLength
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3848121223567756541, guid: 3a6debd15835ffc4f98c5ab3b3c922c5,
         type: 3}
       propertyPath: m_Name
