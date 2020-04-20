@@ -8,8 +8,8 @@ public class Collector : MonoBehaviour
     public int points = 0;
     public GameObject memorySpawner;
     public Vector2 size;
-    public float width;
-    public float height;
+    private float width;
+    private float height;
 
     public float shrinkSpeed = 2.0f;
     public float shrinkAmount = 0.4f;
@@ -18,15 +18,17 @@ public class Collector : MonoBehaviour
     /* which xvalue of the collector's scale will trigger a game over */
     public int gameOverValue = 1;
     public int timesShrunk = 0;
+
+
+    
     void Start() {
         memorySpawner = GameObject.Find("EmotionSpawner");
         size = gameObject.GetComponent<SpriteRenderer>().size; 
         width = size.x;
         height = size.y;
 
-
         /* shrinks at shrinkspeed starting in 5 seconds*/
-        InvokeRepeating("ShrinkCollector", 5.0f,  shrinkSpeed);
+        InvokeRepeating("ShrinkCollector", 15.0f,  shrinkSpeed);
     } 
     void OnTriggerEnter2D(Collider2D coll)
     {   
@@ -55,10 +57,14 @@ public class Collector : MonoBehaviour
         timesShrunk++;
     }
     void Update()
-    {
+    {   
+
         /* GAME OVER CONDITION */
         if(gameObject.transform.localScale.x < gameOverValue) {
             SceneManager.LoadScene("GameOver");
         }
+
     }
+
+
 }

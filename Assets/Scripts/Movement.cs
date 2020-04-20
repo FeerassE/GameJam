@@ -11,13 +11,19 @@ public class Movement : MonoBehaviour
 
     Vector2 movement;
 
+    public Vector2 direction;
+
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        
+        direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
-        animator.SetFloat("Horizontal", movement.x);
-        animator.SetFloat("Vertical", movement.y);
+        if(direction != Vector2.zero) {
+            animator.SetFloat("Horizontal", movement.x);
+            animator.SetFloat("Vertical", movement.y);
+        }
         animator.SetFloat("speed", movement.sqrMagnitude);
     }
 

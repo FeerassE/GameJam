@@ -15,11 +15,16 @@ public class Grab : MonoBehaviour
     public Transform holdPoint;
     public GameObject heldObject;
 
+    private Vector3 lastPosition;
+    private bool moving = false;
 
     private bool hitSuccess = false;
 
     void Start() {
         heldObject = null;
+
+        lastPosition = transform.position;
+        moving = false;
     }
     void Update()
     {
@@ -33,6 +38,8 @@ public class Grab : MonoBehaviour
         if(!direction.Equals(Vector2.zero)) {
             playerDirection.Set(direction.x, direction.y);
         }
+
+
 
         // Grab object on square button on ps4 controller or E
         if(Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Joystick1Button0)) {
@@ -82,9 +89,10 @@ public class Grab : MonoBehaviour
         holdPoint.position = transform.position + new Vector3(playerDirection.x, playerDirection.y, 0) * 1.1f; 
         
         if(grabbed) {
-            Debug.Log("changing heldobject position");
             heldObject.transform.position = holdPoint.position;
         }
+
+        lastPosition = transform.position;
     }
 
     void OnCollisionEnter2D(Collision2D collision){
