@@ -15,6 +15,9 @@ public class Grab : MonoBehaviour
     public Transform holdPoint;
     public GameObject heldObject;
 
+
+    private bool hitSuccess = false;
+
     void Start() {
         heldObject = null;
     }
@@ -22,6 +25,7 @@ public class Grab : MonoBehaviour
     {
         if(!heldObject) {
             grabbed = false;
+            hitSuccess = false;
         }
 
         // Sets the direction of the player
@@ -38,45 +42,57 @@ public class Grab : MonoBehaviour
                 for(int i = 0; i < hits.Length; i++) {
                     if(hits[i].collider.gameObject.tag == "emotion") {
                         hit = hits[i];
+                        hitSuccess = true;
                     }
                 }
-                if(hit.collider != null)
+                if(hitSuccess)
                 {
+                    Debug.Log("hit collider: grabbed is true");
                     heldObject = hit.collider.gameObject;
                     grabbed = true;
                 }
                 else if (inPlayer == true) 
                 {
+                    Debug.Log("inPlayer: grabbed is true");
                     grabbed = true;
                 }
                 else 
                 {
+                    Debug.Log("grabbed i false");
                     grabbed = false;
+                    hitSuccess = false;
                 }
 
                 if(grabbed) {
                     if(heldObject.tag != "emotion") {
+                        heldObject = null;
                         grabbed = false;
+                        hitSuccess = false;
                     }
                 }
 
             } else { // drops
+                heldObject = null;
                 grabbed = false;
+                hitSuccess = false;
             }
         }
 
         // Calculates the position of the hold point where the object will intersect
-        holdPoint.position = transform.position + new Vector3(playerDirection.x, playerDirection.y, 0) * 1; 
+        holdPoint.position = transform.position + new Vector3(playerDirection.x, playerDirection.y, 0) * 1.1f; 
         
         if(grabbed) {
+            Debug.Log("changing heldobject position");
             heldObject.transform.position = holdPoint.position;
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision){
+        Debug.Log("Collision occured");
         inPlayer = true;
         if (!grabbed)
         {
+            Debug.Log("held object set from collision");
             heldObject = collision.gameObject;
         }
     }

@@ -60,6 +60,5 @@ public class Collector : MonoBehaviour
         if(gameObject.transform.localScale.x < gameOverValue) {
             SceneManager.LoadScene("GameOver");
         }
-        Debug.Log(gameObject.transform.localScale);
     }
 }
