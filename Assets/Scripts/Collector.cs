@@ -8,13 +8,16 @@ public class Collector : MonoBehaviour
     public int points = 0;
     public GameObject memorySpawner;
     public Vector2 size;
+    public GameObject door;
+
     private float width;
     private float height;
 
+    public float scale = 0;
     public float shrinkSpeed = 2.0f;
     public float shrinkAmount = 0.4f;
     public bool endCondition = false;
-    
+
     /* which xvalue of the collector's scale will trigger a game over */
     public int gameOverValue = 1;
     public int timesShrunk = 0;
@@ -57,11 +60,16 @@ public class Collector : MonoBehaviour
         timesShrunk++;
     }
     void Update()
-    {   
-
+    {
+        scale = gameObject.transform.localScale.x;
         /* GAME OVER CONDITION */
-        if(gameObject.transform.localScale.x < gameOverValue) {
+        if (gameObject.transform.localScale.x < gameOverValue) {
             SceneManager.LoadScene("GameOver");
+        }
+
+        if(gameObject.transform.localScale.x > 1.0f)
+        {
+            GameObject a = (GameObject)Instantiate(door, new Vector3(-16.999f, -3.26f), Quaternion.identity);
         }
 
     }
