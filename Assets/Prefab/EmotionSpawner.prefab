@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3848121223567756541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3848121223937499220}
+  - component: {fileID: 3848121223567756540}
+  m_Layer: 0
+  m_Name: EmotionSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3848121223937499220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848121223567756541}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.14, y: -1, z: 178.0491}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3848121223567756540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3848121223567756541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8238a66894260c4bad1471faa792924, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  happy: {fileID: 8863640944415935776, guid: 2c0afdf3864b1054bbb927fec47bef8e, type: 3}
+  sad: {fileID: 7143800052219111813, guid: 3d718ba9fb8dbcd4a98b1f04a53c7ea0, type: 3}
+  angry: {fileID: 1161383722256251834, guid: 31aa6485b9c9e3e4e8c00637bfa28902, type: 3}
+  depression: {fileID: 3632894690543630450, guid: 476770ad36a5f1f409462ae9fd76460c,
+    type: 3}
+  anxiety: {fileID: 4809638630606181660, guid: 1fa842bc8dbabd2418bea7fb8b786486, type: 3}
+  empathy: {fileID: 3142447816533534413, guid: 296955a72dc7cdb48993d8cc768a4f41, type: 3}
+  respawnTime: 1
+  recipeLength: 5
+  numbers: []

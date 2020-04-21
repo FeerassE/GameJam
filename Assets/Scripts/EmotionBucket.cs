@@ -26,7 +26,7 @@ public class EmotionBucket : MonoBehaviour
 
     IEnumerator memories()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.0f);
         GameObject a = (GameObject)Instantiate(bucket, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
 
     }

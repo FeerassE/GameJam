@@ -6,12 +6,14 @@ public class Memory : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float speed = 0.05f;
+    public string type;
+
+    public bool held = false;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-
     }
 
     // Update is called once per frame
