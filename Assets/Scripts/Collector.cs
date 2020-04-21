@@ -25,7 +25,7 @@ public class Collector : MonoBehaviour
     public int timesShrunk = 0;
 
     private int doorCount = 0;
-
+    private int dialogueCount = 0;
     void Start() {
         memorySpawner = GameObject.Find("EmotionSpawner");
         size = gameObject.GetComponent<SpriteRenderer>().size;
@@ -81,6 +81,30 @@ public class Collector : MonoBehaviour
         {
             doorCount++;
             GameObject a = (GameObject)Instantiate(door, new Vector3(-16.999f, -3.26f), Quaternion.identity);
+        }
+
+        if (gameObject.transform.localScale.x > 9.0f && dialogueCount < 1)
+        {
+            dialogueCount++;
+            GameObject.Find("DialogueTrigger2").GetComponent<DialogueTrigger2>().TriggerDialogue2();
+        }
+
+        if (gameObject.transform.localScale.x > 11.0f && dialogueCount < 2)
+        {
+            dialogueCount++;
+            GameObject.Find("DialogueTrigger3").GetComponent<DialogueTrigger2>().TriggerDialogue2();
+        }
+
+        if (gameObject.transform.localScale.x > 17.0f && dialogueCount < 3)
+        {
+            dialogueCount++;
+            GameObject.Find("DialogueTrigger4").GetComponent<DialogueTrigger2>().TriggerDialogue2();
+        }
+
+        if (gameObject.transform.localScale.x > 21.0f && dialogueCount < 4)
+        {
+            dialogueCount++;
+            GameObject.Find("DialogueTrigger5").GetComponent<DialogueTrigger2>().TriggerDialogue2();
         }
 
     }
