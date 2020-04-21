@@ -676,7 +676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 71, y: 217}
+  m_AnchoredPosition: {x: 51, y: 217}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280479100
@@ -718,13 +718,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 1
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 0
 --- !u!222 &280479102
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1091,7 +1091,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 106.30003, y: -9.339996}
+  m_AnchoredPosition: {x: 123.7, y: -9.339996}
   m_SizeDelta: {x: 170, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &393693071
@@ -2768,8 +2768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 390, y: -245}
-  m_SizeDelta: {x: 300, y: 40}
+  m_AnchoredPosition: {x: 365.63, y: -245}
+  m_SizeDelta: {x: 348.73688, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533924459
 MonoBehaviour:
@@ -2866,8 +2866,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -213.05, y: 17.15}
-  m_SizeDelta: {x: 287.14758, y: 32.154587}
+  m_AnchoredPosition: {x: -246, y: 17}
+  m_SizeDelta: {x: 340.0963, y: 32.154587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1809502580
 MonoBehaviour:
@@ -3063,7 +3063,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 108.81, y: 58.48}
+  m_AnchoredPosition: {x: 129.9, y: 58.48}
   m_SizeDelta: {x: 82.37038, y: 79.169205}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1868516067
