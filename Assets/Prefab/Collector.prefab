@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5890444155973029743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.91, y: 1.85, z: -6.1498227}
+  m_LocalPosition: {x: 12.17, y: 1.75, z: -6.1498227}
   m_LocalScale: {x: 5, y: 5, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!50 &5890444155973029742
 Rigidbody2D:
   serializedVersion: 4
@@ -120,13 +120,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: 0
   memorySpawner: {fileID: 0}
-  emotionToTest: {fileID: 0}
   size: {x: 0, y: 0}
-  width: 0
-  height: 0
+  door: {fileID: 0}
+  colour: {r: 0, g: 0, b: 0, a: 0}
+  scale: 0
   shrinkSpeed: 2
   shrinkAmount: 0.4
-  maxShrinking: 50
+  endCondition: 0
+  gameOverValue: 1
   timesShrunk: 0
 --- !u!61 &1451377404853975237
 BoxCollider2D:

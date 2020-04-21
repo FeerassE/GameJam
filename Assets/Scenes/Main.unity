@@ -10784,7 +10784,7 @@ PrefabInstance:
     - target: {fileID: 5400517459176430903, guid: 45262d076a9a8f14c8a48c054e9219b6,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[24].m_RefCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5400517459176430903, guid: 45262d076a9a8f14c8a48c054e9219b6,
         type: 3}
@@ -12171,7 +12171,7 @@ PrefabInstance:
     - target: {fileID: 5400517459176430903, guid: 45262d076a9a8f14c8a48c054e9219b6,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[15].m_RefCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5400517459176430903, guid: 45262d076a9a8f14c8a48c054e9219b6,
         type: 3}
@@ -28231,7 +28231,7 @@ PrefabInstance:
     - target: {fileID: 5400517459176430903, guid: 45262d076a9a8f14c8a48c054e9219b6,
         type: 3}
       propertyPath: m_Tiles.Array.data[874].second.m_TileSpriteIndex
-      value: 15
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 5400517459176430903, guid: 45262d076a9a8f14c8a48c054e9219b6,
         type: 3}
@@ -29695,6 +29695,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[24].m_Data
       value: 
+      objectReference: {fileID: 21300000, guid: e6785a7ec3333394c8cf3a406371831d,
+        type: 3}
+    - target: {fileID: 5400517459176430903, guid: 45262d076a9a8f14c8a48c054e9219b6,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[15].m_Data
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5400517459778105440, guid: 45262d076a9a8f14c8a48c054e9219b6,
         type: 3}
@@ -29854,6 +29860,11 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1451377404853975237, guid: d58a04600bee58c42bcd4f4ed2953b3d,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5890444155973029731, guid: d58a04600bee58c42bcd4f4ed2953b3d,
         type: 3}
       propertyPath: memorySpawner
@@ -29873,7 +29884,7 @@ PrefabInstance:
     - target: {fileID: 5890444155973029740, guid: d58a04600bee58c42bcd4f4ed2953b3d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.87
+      value: -1.61
       objectReference: {fileID: 0}
     - target: {fileID: 5890444155973029740, guid: d58a04600bee58c42bcd4f4ed2953b3d,
         type: 3}
